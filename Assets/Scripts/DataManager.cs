@@ -35,11 +35,23 @@ public class DataManager : MonoBehaviour
 
     public void SaveData()
     {
+        SaveData data = new SaveData();
+        data.playerName = highScoreName;
+        data.highScore = highScore;
 
+        string json = JsonUtility.ToJson(data);
+        File.WriteAllText(savePath, json);
     }
 
     public void LoadData()
     {
+        if (File.Exists(savePath))
+        {
+            string json = File.ReadAllText(savePath);
+            SaveData data = JsonUtility.FromJson<SaveData>(json);
 
+            highScore = data.highScore;
+            highScoreName = data.playerName;
+        }
     }
 }
