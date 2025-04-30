@@ -33,6 +33,15 @@ public class DataManager : MonoBehaviour
         LoadData();
     }
 
+    // Comment out when not testing
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetData();
+        }
+    }
+
     public void SaveData()
     {
         SaveData data = new SaveData();
@@ -53,5 +62,21 @@ public class DataManager : MonoBehaviour
             highScore = data.highScore;
             highScoreName = data.playerName;
         }
+    }
+
+    // For test purposes
+    public void ResetData()
+    {
+        string savePath = Application.persistentDataPath + "/savefile.json";
+        if (File.Exists(savePath))
+        {
+            File.Delete(savePath);
+            Debug.Log("Save data reset.");
+        }
+
+        // Reset runtime values
+        highScore = 0;
+        highScoreName = "";
+        playerName = "";
     }
 }
