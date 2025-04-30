@@ -34,13 +34,13 @@ public class DataManager : MonoBehaviour
     }
 
     // Comment out when not testing
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ResetData();
-        }
-    }
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.R))
+    //    {
+    //        ResetData();
+    //    }
+    //}
 
     public void SaveData()
     {
