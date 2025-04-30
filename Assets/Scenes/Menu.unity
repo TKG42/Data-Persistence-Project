@@ -1406,6 +1406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f99fea7591c6b40b2025899bac24d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameInputField: {fileID: 649408526}
+  highScoreText: {fileID: 1423504998}
 --- !u!1 &1423504996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,7 +1528,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -60.14044, y: 0, z: -51.720642, w: 0}
+  m_margin: {x: -134.29144, y: 0, z: -131.85156, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1876,6 +1878,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20307612aab39c24c9c40740eb1d6cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
+  highScore: 0
+  highScoreName: 
 --- !u!4 &2129223674
 Transform:
   m_ObjectHideFlags: 0
